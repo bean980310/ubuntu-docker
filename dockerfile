@@ -37,7 +37,7 @@ RUN /apps.sh && rm /apps.sh
 RUN rm -f /etc/ssh/ssh_host_*
 
 # NGINX Proxy
-COPY .nginx/502.html /usr/share/nginx/html/502.html
+COPY nginx/502.html /usr/share/nginx/html/502.html
 
 # Copy the scripts
 WORKDIR /
