@@ -27,8 +27,7 @@ target "cu118-torch212" {
         REQUIRED_CUDA_VERSION="11.8"
         RELEASE="$RELEASE"
         INDEX_URL="https://download.pytorch.org/whl/cu118"
-        TORCH_VERSION="2.1.2"
-        TORCHVISION_VERSION="0.16.2"
+        TORCH_VERSION="2.1.2+cu118"
         XFORMERS_VERSION="0.0.23.post1+cu118"
     }
     platforms=["linux/amd64"]
@@ -43,8 +42,7 @@ target "cu121-torch212" {
         REQUIRED_CUDA_VERSION="12.1"
         RELEASE="$RELEASE"
         INDEX_URL="https://download.pytorch.org/whl/cu121"
-        TORCH_VERSION="2.1.2"
-        TORCHVISION_VERSION="0.16.2"
+        TORCH_VERSION="2.1.2+cu121"
         XFORMERS_VERSION="0.0.23.post1+cu121"
     }
     platforms=["linux/amd64"]
@@ -59,8 +57,7 @@ target "cu121-torch222" {
         REQUIRED_CUDA_VERSION="12.1"
         RELEASE="$RELEASE"
         INDEX_URL="https://download.pytorch.org/whl/cu121"
-        TORCH_VERSION="2.2.2"
-        TORCHVISION_VERSION="0.17.2"
+        TORCH_VERSION="2.2.2+cu121"
         XFORMERS_VERSION="0.0.25.post1"
     }
     platforms=["linux/amd64"]
@@ -75,8 +72,7 @@ target "cu121-torch230" {
         REQUIRED_CUDA_VERSION="12.1"
         RELEASE="$RELEASE"
         INDEX_URL="https://download.pytorch.org/whl/cu121"
-        TORCH_VERSION="2.3.0"
-        TORCHVISION_VERSION="0.18.0"
+        TORCH_VERSION="2.3.0+cu121"
         XFORMERS_VERSION="0.0.26.post1"
     }
     platforms=["linux/amd64"]
