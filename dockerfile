@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     SHELL=/bin/bash
 
 # Install Ubuntu packages
-COPY --chmod=755 ../../build/packages.sh /packages.sh
+COPY --chmod=755 build/packages.sh /packages.sh
 RUN /packages.sh && rm /packages.sh
 
 # Set Python
@@ -28,20 +28,20 @@ FROM base as setup
 # Install apps
 # ARG RUNPODCTL_VERSION
 # ENV RUNPODCTL_VERSION=${RUNPODCTL_VERSION}
-COPY ../../code-server/vsix/*.vsix /tmp/
-COPY ../../code-server/settings.json /root/.local/share/code-server/User/settings.json
-COPY --chmod=755 ../../build/apps.sh /apps.sh
+COPY code-server/vsix/*.vsix /tmp/
+COPY code-server/settings.json /root/.local/share/code-server/User/settings.json
+COPY --chmod=755 build/apps.sh /apps.sh
 RUN /apps.sh && rm /apps.sh
 
 # Remove existing SSH host keys
 RUN rm -f /etc/ssh/ssh_host_*
 
 # NGINX Proxy
-COPY ../../nginx/502.html /usr/share/nginx/html/502.html
+COPY .nginx/502.html /usr/share/nginx/html/502.html
 
 # Copy the scripts
 WORKDIR /
-COPY --chmod=755 ../../scripts/* ./
+COPY --chmod=755 scripts/* ./
 RUN mv /manage_venv.sh /usr/local/bin/manage_venv
 
 # Start the container
