@@ -20,7 +20,7 @@ group "default" {
 }
 
 target "cu118-torch212" {
-    dockerfile=./dockerfile
+    dockerfile="./dockerfile"
     tags=["${REGISTRY}/${REGISTRY_USER}/ubuntu-docker:${RELEASE}-cuda11.8.0-torch2.1.2"]
     args={
         BASE_IMAGE = "nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04"
@@ -36,7 +36,7 @@ target "cu118-torch212" {
 }
 
 target "cu121-torch212" {
-    dockerfile=./dockerfile
+    dockerfile="./dockerfile"
     tags=["${REGISTRY}/${REGISTRY_USER}/ubuntu-docker:${RELEASE}-cuda12.1.1-torch2.1.2"]
     args={
         BASE_IMAGE = "nvidia/cuda:12.1.1-cudnn8-devel-ubuntu22.04"
@@ -52,7 +52,7 @@ target "cu121-torch212" {
 }
 
 target "cu121-torch222" {
-    dockerfile=./dockerfile
+    dockerfile="./dockerfile"
     tags=["${REGISTRY}/${REGISTRY_USER}/ubuntu-docker:${RELEASE}-cuda12.1.1-torch2.2.2"]
     args={
         BASE_IMAGE = "nvidia/cuda:12.1.1-cudnn8-devel-ubuntu22.04"
@@ -67,8 +67,8 @@ target "cu121-torch222" {
     annotations=["org.opencontainers.image.authors=${REGISTRY_USER}"]
 }
 
-target "cu121-torch222" {
-    dockerfile=./dockerfile
+target "cu121-torch230" {
+    dockerfile="./dockerfile"
     tags=["${REGISTRY}/${REGISTRY_USER}/ubuntu-docker:${RELEASE}-cuda12.1.1-torch2.3.0"]
     args={
         BASE_IMAGE = "nvidia/cuda:12.1.1-cudnn8-devel-ubuntu22.04"
