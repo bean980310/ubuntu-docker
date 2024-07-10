@@ -78,3 +78,18 @@ target "cu121-torch230" {
     platforms=["linux/amd64"]
     annotations=["org.opencontainers.image.authors=${REGISTRY_USER}"]
 }
+
+target "cu121-torch231" {
+    dockerfile="./dockerfile"
+    tags=["${REGISTRY}/${REGISTRY_USER}/ubuntu-docker:${RELEASE}-cuda12.1.1-torch2.3.1"]
+    args={
+        BASE_IMAGE = "nvidia/cuda:12.1.1-cudnn8-devel-ubuntu22.04"
+        REQUIRED_CUDA_VERSION="12.1"
+        RELEASE="$RELEASE"
+        INDEX_URL="https://download.pytorch.org/whl/cu121"
+        TORCH_VERSION="2.3.1+cu121"
+        XFORMERS_VERSION="0.0.27"
+    }
+    platforms=["linux/amd64"]
+    annotations=["org.opencontainers.image.authors=${REGISTRY_USER}"]
+}
