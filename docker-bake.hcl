@@ -15,7 +15,8 @@ group "default" {
         "cu118-torch212",
         "cu121-torch212",
         "cu121-torch222",
-        "cu121-torch230"
+        "cu121-torch230",
+        "cu121-torch231"
     ]
 }
 
