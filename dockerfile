@@ -23,7 +23,7 @@ RUN pip3 install --no-cache-dir torch==${TORCH_VERSION} torchvision torchaudio -
     pip3 install --no-cache-dir xformers==${XFORMERS_VERSION} --index-url ${INDEX_URL}
 
 # Stage 2: Install applications
-# FROM base as setup
+FROM base as setup
 
 # Install apps
 # ARG RUNPODCTL_VERSION
@@ -34,7 +34,7 @@ RUN pip3 install --no-cache-dir torch==${TORCH_VERSION} torchvision torchaudio -
 # RUN /apps.sh && rm /apps.sh
 
 # Remove existing SSH host keys
-# RUN rm -f /etc/ssh/ssh_host_*
+RUN rm -f /etc/ssh/ssh_host_*
 
 # NGINX Proxy
 # COPY nginx/502.html /usr/share/nginx/html/502.html
@@ -45,8 +45,8 @@ RUN pip3 install --no-cache-dir torch==${TORCH_VERSION} torchvision torchaudio -
 # RUN mv /manage_venv.sh /usr/local/bin/manage_venv
 
 # Start the container
-# ARG REQUIRED_CUDA_VERSION
-# ENV REQUIRED_CUDA_VERSION=${REQUIRED_CUDA_VERSION}
+ARG REQUIRED_CUDA_VERSION
+ENV REQUIRED_CUDA_VERSION=${REQUIRED_CUDA_VERSION}
 # SHELL ["/bin/bash", "--login", "-c"]
 # CMD [ "/start.sh" ]
 CMD ["bin/bash"]
