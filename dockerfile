@@ -45,8 +45,8 @@ RUN rm -f /etc/ssh/ssh_host_*
 # RUN mv /manage_venv.sh /usr/local/bin/manage_venv
 
 # Start the container
-ARG REQUIRED_CUDA_VERSION
-ENV REQUIRED_CUDA_VERSION=${REQUIRED_CUDA_VERSION}
+# ARG REQUIRED_CUDA_VERSION
+# ENV REQUIRED_CUDA_VERSION=${REQUIRED_CUDA_VERSION}
 # SHELL ["/bin/bash", "--login", "-c"]
 # CMD [ "/start.sh" ]
 CMD ["bin/bash"]
