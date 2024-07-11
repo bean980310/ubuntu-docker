@@ -100,6 +100,7 @@ target "cpu-torch231"{
     args={
         BASE_IMAGE = "ubuntu:22.04"
         RELEASE="$RELEASE"
+        INDEX_URL="https://download.pytorch.org/whl/cpu"
         TORCH_VERSION="2.3.1"
     }
     platforms=["linux/amd64"]
