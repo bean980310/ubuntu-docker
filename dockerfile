@@ -23,7 +23,7 @@ RUN pip3 install --no-cache-dir torch==${TORCH_VERSION} torchvision torchaudio -
     pip3 install --no-cache-dir xformers==${XFORMERS_VERSION} --index-url ${INDEX_URL}
 
 # Stage 2: Install applications
-FROM base as setup
+# FROM base as setup
 
 # Install apps
 # ARG RUNPODCTL_VERSION
