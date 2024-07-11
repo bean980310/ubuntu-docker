@@ -19,10 +19,10 @@ RUN ln -s /usr/bin/python3.10 /usr/bin/python
 ARG TORCH_VERSION
 # ARG XFORMERS_VERSION
 
-RUN pip3 install --no-cache-dir torch==${TORCH_VERSION} torchvision torchaudio --index-url ${INDEX_URL} &&
+RUN pip3 install --no-cache-dir torch==${TORCH_VERSION} torchvision torchaudio --index-url ${INDEX_URL}
 
 # Stage 2: Install applications
-FROM base as setup
+# FROM base as setup
 
 # Install apps
 # ARG RUNPODCTL_VERSION
