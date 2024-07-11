@@ -93,3 +93,15 @@ target "cu121-torch231" {
     platforms=["linux/amd64"]
     annotations=["org.opencontainers.image.authors=${REGISTRY_USER}"]
 }
+
+target "cpu-torch231"{
+    dockerfile="./dockerfile.cpu"
+    tags=["${REGISTRY}/${REGISTRY_USER}/ubuntu-docker:${RELEASE}-cpu-torch2.3.1"]
+    args={
+        BASE_IMAGE = "ubuntu:22.04"
+        RELEASE="$RELEASE"
+        TORCH_VERSION="2.3.1"
+    }
+    platforms=["linux/amd64"]
+    annotations=["org.opencontainers.image.authors=${REGISTRY_USER}"]
+}

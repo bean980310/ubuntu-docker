@@ -177,11 +177,11 @@ start_code_server() {
     echo "code-server started"
 }
 
-# start_runpod_uploader() {
-#     echo "Starting RunPod Uploader..."
-#     nohup /usr/local/bin/runpod-uploader &> /workspace/logs/runpod-uploader.log &
-#     echo "RunPod Uploader started"
-# }
+start_runpod_uploader() {
+    echo "Starting RunPod Uploader..."
+    nohup /usr/local/bin/runpod-uploader &> /workspace/logs/runpod-uploader.log &
+    echo "RunPod Uploader started"
+}
 
 configure_filezilla() {
     # Only proceed if there is a public IP
@@ -258,17 +258,17 @@ start_cron() {
 # ---------------------------------------------------------------------------- #
 
 echo "Container Started, configuration in progress..."
-start_nginx
-setup_ssh
-start_cron
-start_jupyter
-start_code_server
-#check_cuda_version
-#test_pytorch_cuda
-start_runpod_uploader
+# start_nginx
+# setup_ssh
+# start_cron
+# start_jupyter
+# start_code_server
+# check_cuda_version
+# test_pytorch_cuda
+# start_runpod_uploader
 execute_script "/pre_start.sh" "Running pre-start script..."
-configure_filezilla
-update_rclone
+# configure_filezilla
+# update_rclone
 export_env_vars
 execute_script "/post_start.sh" "Running post-start script..."
 echo "Container is READY!"
