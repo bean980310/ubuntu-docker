@@ -94,29 +94,3 @@ target "cu121-torch231" {
     platforms=["linux/amd64"]
     annotations=["org.opencontainers.image.authors=${REGISTRY_USER}"]
 }
-
-target "cpu-torch231"{
-    dockerfile="./Dockerfile.cpu"
-    tags=["${REGISTRY}/${REGISTRY_USER}/ubuntu-docker:${RELEASE}-cpu-torch2.3.1"]
-    args={
-        BASE_IMAGE = "ubuntu:22.04"
-        RELEASE="$RELEASE"
-        INDEX_URL="https://download.pytorch.org/whl/cpu"
-        TORCH_VERSION="2.3.1"
-    }
-    platforms=["linux/amd64"]
-    annotations=["org.opencontainers.image.authors=${REGISTRY_USER}"]
-}
-
-target "arm64-torch231"{
-    dockerfile="./Dockerfile.cpu"
-    tags=["${REGISTRY}/${REGISTRY_USER}/ubuntu-docker:${RELEASE}-arm64-torch2.3.1"]
-    args={
-        BASE_IMAGE = "ubuntu:22.04"
-        RELEASE="$RELEASE"
-        INDEX_URL="https://download.pytorch.org/whl/cpu"
-        TORCH_VERSION="2.3.1"
-    }
-    platforms=["linux/arm64"]
-    annotations=["org.opencontainers.image.authors=${REGISTRY_USER}"]
-}
