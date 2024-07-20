@@ -35,10 +35,10 @@ rclone selfupdate
 
 curl https://getcroc.schollz.com | bash
 
-curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
-./nodesource_setup.sh 
+# curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+# sudo ./nodesource_setup.sh 
 
-apt install -y nodejs
+# apt install -y nodejs
 
 # curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | bash && \
 #     apt install -y speedtest
