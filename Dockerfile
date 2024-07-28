@@ -31,6 +31,8 @@ RUN if [ "${INDEX_URL}" = "https://download.pytorch.org/whl/cu118" ]; then \
 COPY --chmod=755 build/apps.sh /apps.sh
 RUN /apps.sh && rm /apps.sh
 
+RUN pip3 cache purge
+
 # Remove existing SSH host keys
 RUN rm -f /etc/ssh/ssh_host_*
 
