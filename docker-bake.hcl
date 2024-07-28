@@ -104,7 +104,7 @@ target "cu124-torch240" {
         REQUIRED_CUDA_VERSION="12.4"
         RELEASE="$RELEASE"
         INDEX_URL="https://download.pytorch.org/whl/cu124"
-        TORCH_VERSION="2.3.1+cu121"
+        TORCH_VERSION="2.4.0+cu124"
         XFORMERS_VERSION="0.0.27.post2"
     }
     platforms=["linux/amd64"]
