@@ -15,11 +15,9 @@ apt install -y \
     git \
     git-lfs \
     ncdu \
-    nginx \
     net-tools \
     dnsutils \
     inetutils-ping \
-    openssh-server \
     libglib2.0-0 \
     libsm6 \
     libgl1 \
