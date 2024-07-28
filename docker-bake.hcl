@@ -7,7 +7,7 @@ variable "REGISTRY_USER" {
 }
 
 variable "RELEASE" {
-    default = "1.0.3"
+    default = "1.0.4"
 }
 
 group "default" {
