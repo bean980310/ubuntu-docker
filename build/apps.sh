@@ -29,11 +29,11 @@ python3 -m ipykernel install --name "python3" --display-name "Python 3"
 #     chmod +x installer.sh && \
 #     ./installer.sh
 
-curl https://rclone.org/install.sh | bash
+# curl https://rclone.org/install.sh | bash
 
-rclone selfupdate
+# rclone selfupdate
 
-curl https://getcroc.schollz.com | bash
+# curl https://getcroc.schollz.com | bash
 
 # curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
 # sudo ./nodesource_setup.sh 
