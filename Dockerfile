@@ -22,11 +22,12 @@ ARG XFORMERS_VERSION
 RUN if [ "${INDEX_URL}" = "https://download.pytorch.org/whl/cu118" ]; then \
     pip3 install --no-cache-dir torch==${TORCH_VERSION} torchvision torchaudio --index-url ${INDEX_URL} && \
     pip3 install --no-cache-dir xformers==${XFORMERS_VERSION} --index-url ${INDEX_URL} && \
-    pip3 install -U huggingface huggingface_hub[cli] \
+    pip3 install -U huggingface huggingface_hub[cli]; \
     else \
     pip3 install --no-cache-dir torch==${TORCH_VERSION} torchvision torchaudio --index-url ${INDEX_URL} && \
     pip3 install --no-cache-dir xformers==${XFORMERS_VERSION} && \
-    pip3 install -U huggingface huggingface_hub[cli]
+    pip3 install -U huggingface huggingface_hub[cli]; \
+    fi;
 
 COPY --chmod=755 build/apps.sh /apps.sh
 RUN /apps.sh && rm /apps.sh
