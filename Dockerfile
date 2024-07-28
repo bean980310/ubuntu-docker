@@ -20,7 +20,7 @@ ARG TORCH_VERSION
 ARG XFORMERS_VERSION
 
 RUN pip3 install --no-cache-dir torch==${TORCH_VERSION} torchvision torchaudio --index-url ${INDEX_URL} && \
-    pip3 install --no-cache-dir xformers==${XFORMERS_VERSION} --index-url ${INDEX_URL} && \
+    pip3 install --no-cache-dir xformers==${XFORMERS_VERSION} && \
     pip3 install -U huggingface huggingface_hub[cli]
 
 COPY --chmod=755 build/apps.sh /apps.sh
