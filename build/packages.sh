@@ -18,6 +18,7 @@ apt install -y \
     net-tools \
     dnsutils \
     inetutils-ping \
+    netcat-openbsd \
     libglib2.0-0 \
     libsm6 \
     libgl1 \
@@ -45,7 +46,10 @@ apt install -y \
     libgoogle-perftools4 \
     libtcmalloc-minimal4 \
     apt-transport-https \
-    ca-certificates
+    ca-certificates \
+    pandoc \
+    gcc \
+    jq
 update-ca-certificates
 apt clean
 rm -rf /var/lib/apt/lists/*
