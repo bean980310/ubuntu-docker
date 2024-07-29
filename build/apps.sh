@@ -25,6 +25,8 @@ chmod +x dotnet-install.sh
 
 python3 -m ipykernel install --name "python3" --display-name "Python 3"
 
+pip3 cache purge
+
 # curl -sSL https://github.com/kodxana/RunPod-FilleUploader/raw/main/scripts/installer.sh -o installer.sh && \
 #     chmod +x installer.sh && \
 #     ./installer.sh
