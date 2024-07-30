@@ -1,9 +1,17 @@
 #!/usr/bin/env bash
 set -e
 
-pip3 install -U --no-cache-dir ipykernel \
-    ipywidgets
-    
+pip3 install -U --no-cache-dir jupyter \
+    jupyterlab \
+    jupyterlab_widgets \
+    ipykernel \
+    ipywidgets \
+    tensorflow \
+    tensorboard \
+    tensorboardx \
+    onnxruntime-gpu \
+    onnx
+
 wget https://dot.net/v1/dotnet-install.sh
 chmod +x dotnet-install.sh
 ./dotnet-install.sh --channel 8.0 --runtime aspnetcore
