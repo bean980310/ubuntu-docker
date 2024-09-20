@@ -7,7 +7,7 @@ variable "REGISTRY_USER" {
 }
 
 variable "RELEASE" {
-    default = "1.0.5"
+    default = "1.0.6"
 }
 
 group "default" {
@@ -18,6 +18,7 @@ group "default" {
         "cu121-torch230",
         "cu121-torch231",
         "cu124-torch240",
+        "cu124-torch241",
     ]
 }
 
@@ -106,6 +107,21 @@ target "cu124-torch240" {
         INDEX_URL="https://download.pytorch.org/whl/cu124"
         TORCH_VERSION="2.4.0+cu124"
         XFORMERS_VERSION="0.0.27.post2"
+    }
+    platforms=["linux/amd64"]
+    annotations=["org.opencontainers.image.authors=${REGISTRY_USER}"]
+}
+
+target "cu124-torch241" {
+    dockerfile="./Dockerfile"
+    tags=["${REGISTRY}/${REGISTRY_USER}/ubuntu-docker:${RELEASE}-cuda12.5.1-torch2.4.1"]
+    args={
+        BASE_IMAGE = "nvidia/cuda:12.5.1-cudnn-devel-ubuntu22.04"
+        REQUIRED_CUDA_VERSION="12.4"
+        RELEASE="$RELEASE"
+        INDEX_URL="https://download.pytorch.org/whl/cu124"
+        TORCH_VERSION="2.4.1+cu124"
+        XFORMERS_VERSION="0.0.28.post1"
     }
     platforms=["linux/amd64"]
     annotations=["org.opencontainers.image.authors=${REGISTRY_USER}"]
