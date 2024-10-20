@@ -50,9 +50,9 @@ target "cu121-torch241-xformers0028post1" {
 
 target "cu124-torch241-xformers0028post1" {
     dockerfile="./Dockerfile"
-    tags=["${REGISTRY}/${REGISTRY_USER}/ubuntu-docker:${RELEASE}-cuda12.6.2-cudnn8-devel-torch2.4.1"]
+    tags=["${REGISTRY}/${REGISTRY_USER}/ubuntu-docker:${RELEASE}-cuda12.4-cudnn9-devel-torch2.4.1"]
     args={
-        BASE_IMAGE = "nvidia/cuda:12.6.2-cudnn-devel-ubuntu22.04"
+        BASE_IMAGE = "pytorch/pytorch:2.4.1-cuda12.4-cudnn9-devel"
         REQUIRED_CUDA_VERSION="12.4"
         RELEASE="$RELEASE"
         INDEX_URL="https://download.pytorch.org/whl/cu124"

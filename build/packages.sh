@@ -3,22 +3,17 @@ apt update && apt -y full-upgrade
 apt install -y \
     build-essential \
     software-properties-common \
-    python3.10-venv \
-    python3-pip \
     python3-tk \
     python3-dev \
     python3-launchpadlib \
     nodejs \
     npm \
     bash \
-    dos2unix \
     git \
     git-lfs \
     ncdu \
     net-tools \
-    dnsutils \
-    inetutils-ping \
-    netcat-openbsd \
+    openssh-server \
     libglib2.0-0 \
     libsm6 \
     libgl1 \
@@ -30,7 +25,6 @@ apt install -y \
     psmisc \
     rsync \
     vim \
-    nano \
     zip \
     unzip \
     p7zip-full \
