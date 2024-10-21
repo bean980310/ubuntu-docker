@@ -29,21 +29,3 @@ chmod +x dotnet-install.sh
 python3 -m ipykernel install --name "python3" --display-name "Python 3"
 
 pip3 cache purge
-
-# curl -sSL https://github.com/kodxana/RunPod-FilleUploader/raw/main/scripts/installer.sh -o installer.sh && \
-#     chmod +x installer.sh && \
-#     ./installer.sh
-
-# curl https://rclone.org/install.sh | bash
-
-# rclone selfupdate
-
-# curl https://getcroc.schollz.com | bash
-
-# curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
-# sudo ./nodesource_setup.sh 
-
-# apt install -y nodejs
-
-# curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | bash && \
-#     apt install -y speedtest
